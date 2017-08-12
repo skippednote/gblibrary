@@ -25,6 +25,10 @@
 ### Usage
 > $ gblibrary
 
+![](screenshot.png)
+
+[Example Library](https://bassam.co/library/)
+
 ### Usage
 - [ ] Use flags to add custom configuration.
 - [ ] Multiple output formats.
