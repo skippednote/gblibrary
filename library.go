@@ -1,16 +1,17 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gosimple/slug"
 	"github.com/sillyotter/gbsearch"
+	"github.com/sirupsen/logrus"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -68,8 +69,12 @@ func saveImage(b book) {
 }
 
 func saveBook(b book) {
-	bookPath := "content/library/" + b.Slug + ".md"
-	fmt.Println(bookPath)
+	t, err := time.Parse("2006-01-02", b.Date)
+	if err != nil {
+		log.Fatal(err)
+	}
+	date := generateDate(t)
+	bookPath := "content/library/" + date + "-" + b.Slug + ".md"
 
 	f, err := os.Create(bookPath)
 	if err != nil {
@@ -82,6 +87,10 @@ func saveBook(b book) {
 }
 
 func save(b book) {
+	logrus.WithFields(logrus.Fields{
+		"Title":  b.Title,
+		"Author": b.Author,
+	}).Info("Saving book to Library.")
 	saveImage(b)
 	saveBook(b)
 }

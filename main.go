@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	cleanup()
+	setup()
 }
 
 func main() {
