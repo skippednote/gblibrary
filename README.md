@@ -16,7 +16,7 @@
   rating: 3
   read: false
 ```
-- Add a `books.tmpl.html` which is used to build a page for each book.
+- Add a `book.tmpl.html` which is used to build a page for each book.
 ```twig
 <h1>{{ .Title }}</h1>
 <p>{{ .Author }}</p>
