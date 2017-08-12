@@ -3,7 +3,7 @@
 > Get book details using ISBN number and build a library page.
 
 ### Install
-  go get github.com/skippednote/gblibrary
+> go get github.com/skippednote/gblibrary
 
 ### Setup
 - Add a `books.yml` file where you want to build the library page.
@@ -23,7 +23,7 @@
 ```
 
 ### Usage
-  $ gblibrary
+> $ gblibrary
 
 ### Usage
 - [ ] Use flags to add custom configuration.
