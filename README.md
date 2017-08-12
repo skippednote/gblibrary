@@ -26,5 +26,5 @@
   $ gblibrary
 
 ### Usage
-- [] Use flags to add custom configuration.
-- [] Multiple output formats.
+- [ ] Use flags to add custom configuration.
+- [ ] Multiple output formats.
